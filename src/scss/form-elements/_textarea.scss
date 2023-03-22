@@ -1,0 +1,24 @@
+textarea {
+    @include placeholder-color($color);
+    color: $color;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(174, 189, 216, 0.5);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font: 18px $font-family;
+    padding: 18px 22px;
+    width: 100%;
+    resize: none;
+    height: 200px;
+    margin: 0;
+
+    &:focus,
+    &.focus {
+        border-color: $color;
+    }
+
+    .error & {
+        @include placeholder-color($cRed);
+        color: $cRed;
+    }
+}

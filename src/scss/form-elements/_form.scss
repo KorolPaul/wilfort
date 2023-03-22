@@ -1,0 +1,150 @@
+.form {
+    max-width: 480px;
+    margin: 0 auto 170px;
+    position: relative;
+    @include desktop {
+        margin-bottom: 70px;
+    }
+
+    &_row {
+        margin: 0 0 46px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            background: url(#{$img}/error-glow.png) no-repeat center / cover;
+            width: 371px;
+            height: 67px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -185px;
+            pointer-events: none;
+            opacity: 0;
+            transition: .2s $easing opacity;
+        }
+
+        &.error::after {
+            opacity: 1;
+        }
+    }
+
+    &_submit[type] {
+        @include button-reset;
+        @include hover-scale;
+        background: url(#{$img}/submit-button.png) no-repeat center / cover;
+        width: 212px;
+        height: 68px;
+        color: transparent;
+        filter: saturate(1);
+        transition: .2s $easing filter, .2s $easing transform;
+
+        &:hover {
+            opacity: 1;
+            filter: saturate(2);
+        }
+
+        &:active {
+            opacity: 1;
+            filter: saturate(1.2);
+        }
+        &:disabled {
+            background-image: url(#{$img}/submited-button.png);
+            opacity: 1;
+            pointer-events: none;
+        }
+    }
+
+    &_error {
+        font-size: 18px;
+        line-height: 24px;
+        color: $cRed;
+        position: absolute;
+        left: 0;
+        bottom: -36px;
+        display: none;
+
+        .error & {
+            display: block;
+        }
+    }
+
+    &_ghost {
+        position: absolute;
+        animation: flying 8s $easing infinite;
+        z-index: 0;
+
+        &__1 {
+            background: url(#{$img}/ghost-1.png) no-repeat center / 100% 100%;
+            width: 138px;
+            height: 152px;
+            top: -200px;
+            right: -70px;
+            @include tablet {
+                width: 196px;
+                height: 215px;
+                top: -150px;
+                right: -220px;
+            }
+            @include desktop {
+                width: 225px;
+                height: 247px;
+                right: -300px;
+            }
+        }
+        &__2 {
+            animation-delay: .2s;
+            animation-direction: reverse;
+            background: url(#{$img}/ghost-2.png) no-repeat center / 100% 100%;
+            width: 167px;
+            height: 184px;
+            bottom: -140px;
+            left: -20px;
+            @include tablet {
+                width: 234px;
+                height: 260px;
+                bottom: -100px;
+                left: -220px;
+            }
+            @include desktop {
+                width: 249px;
+                height: 275px;
+                left: -280px;
+                bottom: 100px;
+            }
+        }
+        &__3 {
+            animation-duration: 5s;
+            background: url(#{$img}/ghost-3.png) no-repeat center / 100% 100%;
+            width: 139px;
+            height: 147px;
+            bottom: -100px;
+            right: -60px;
+            @include tablet {
+                width: 196px;
+                height: 208px;
+                bottom: -140px;
+                right: -220px;
+            }
+            @include desktop {
+                width: 204px;
+                height: 219px;
+                right: -220px;
+                bottom: -100px;
+            }
+        }
+    }
+}
+
+@keyframes flying {
+    0% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}

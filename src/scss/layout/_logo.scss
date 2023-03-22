@@ -1,0 +1,12 @@
+.logo {
+    display: block;
+    width: 162px;
+    @include desktop {
+        width: 244px;
+    }
+
+    &_image {
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,103 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color;
+    background: $bg_color;
+    font: #{$font-size__small}/#{1.4} $font-family;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    @include tablet {
+        font-size: $font-size;
+    }
+}
+
+.loaded {
+    overflow: auto;
+}
+
+.results-page {
+    background-color: #060815;
+}
+
+a {
+    color: $cYellow;
+    text-decoration: none;
+    transition: .2s $easing color;
+
+    &:hover,
+    &.hover {
+        color: $cOrange;
+        outline: none;
+    }
+    &:active,
+    &.active {
+        outline: none;
+    }
+}
+
+p {
+    margin: 0 0 20px;
+    @include desktop {
+        margin-bottom: 22px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 100%;
+}
+
+ol,
+ul {
+    padding: 0 0 0 20px;
+    margin: 0 0 20px;
+    @include tablet {
+        padding-left: 24px;
+    }
+    @include desktop {
+        padding-left: 28px;
+    }
+}
+a[name] {
+    position: relative;
+    top: -50px;
+}
+
+.menu-opened {
+    overflow: hidden;
+    @include desktop {
+        overflow: initial;
+    }
+}
+
+.bright {
+    color: $cOrange;
+}
+
+.mobile-only {
+    @include tablet {
+        display: none;
+    }
+}
+
+.desktop-only {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}

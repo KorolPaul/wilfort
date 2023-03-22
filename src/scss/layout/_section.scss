@@ -1,0 +1,249 @@
+.section {
+    position: relative;
+    overflow: visible;
+    @include desktop {
+        overflow: visible;
+    }
+
+    &__showcase {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            height: 150px;
+            margin-top: -50px;
+            pointer-events: none;
+            z-index: 1;
+            background: linear-gradient(to bottom, transparent 0%, #020c1e 30%, #020c1e 60%, transparent 100%);
+            @include tablet {
+                background: linear-gradient(to bottom, transparent 0%, #020c1e 50%, #020c1e 70%, transparent 100%);
+            }
+        }
+    }
+    &__steps {
+        background: url(#{$img}/stars.svg) no-repeat center / 100% auto,
+                    url(#{$img}/steps-bg.svg) no-repeat top -120px center / 100% 100%;
+        background-color: #0c1a34;
+        padding: 100px 0 0;
+        @include tablet {
+            background-position: center top, top -100px center;
+            background-size: auto, 100% 120%;
+            padding-bottom: 40px;
+        }
+        @include desktop {
+            padding: 160px 0 40px;
+        }
+
+        .loaded   &::after {
+            content: '';
+            background: url(#{$img}/steps-bottom.png) no-repeat center bottom;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -100px;
+            height: 300px;
+            pointer-events: none;
+            z-index: 1;
+            @include desktop {
+                background-size: 100% auto;
+                bottom: -60px;
+            }
+        }
+    }
+    &__platforms {
+        background: url(#{$img}/stars.svg) no-repeat center top / 100% auto,
+                    url(#{$img}/platforms-bg.svg) no-repeat bottom center / 100% 100%;
+        @include tablet {
+        }
+        @include desktop {
+            background-size: auto, 100%;
+            padding: 70px 0 120px;
+        }
+
+        .loaded  &::after {
+            content: '';
+            background: url(#{$img}/platforms-bottom.png) no-repeat center bottom;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            height: 300px;
+            pointer-events: none;
+            z-index: 1;
+            @include desktop {
+                background-size: 100% auto;
+            }
+        }
+    }
+    &__treasures {
+        background: url(#{$img}/stars.svg) no-repeat center top 5% / 100% auto,
+                    url(#{$img}/treasures-bg.svg) no-repeat bottom center / 100% 100%;
+        padding: 115px 0 40px;
+        @include tablet {
+        }
+        @include desktop {
+            background-position: center, bottom center;
+            background-size: auto, 100%;
+            padding: 150px 0 100px;
+        }
+
+        .loaded  &::after {
+            content: '';
+            background: url(#{$img}/treasures-bottom.png) no-repeat left 5% bottom;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -40px;
+            height: 300px;
+            pointer-events: none;
+            z-index: 1;
+            @include desktop {
+                background-size: 100% auto;
+                background-position: center bottom;
+            }
+        }
+    }
+    &__winners {
+        background: url(#{$img}/stars.svg) repeat-y center top 5% / 100% auto,
+                    url(#{$img}/winners-bg.svg) no-repeat bottom center / 100% 100%;
+        padding: 115px 0 40px;
+
+        @include tablet {
+            background-position: center, bottom center;
+            background-size: auto, 100%;
+        }
+
+        @include desktop {
+            padding: 150px 0 100px;
+        }
+
+        &::after {
+            content: '';
+            background: url(#{$img}/treasures-bottom.png) no-repeat left 5% bottom;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -40px;
+            height: 300px;
+            pointer-events: none;
+            z-index: 1;
+
+            @include desktop {
+                background-size: 100% auto;
+                background-position: center bottom;
+            }
+        }
+    }
+    &__faq {
+        .loaded & {
+            background: url(#{$img}/stars.svg) no-repeat center top 10% ,
+                        url(#{$img}/faq-bottom.png) no-repeat center bottom 3% / auto 300px,
+                        url(#{$img}/faq-bg.svg) no-repeat top -20px center / 100% 90%;
+            background-color: #230817;
+            padding: 125px 0 100px;
+            @include tablet {
+                background-position: center top, bottom center, top center;
+                background-size: auto, 100% auto, 100% 90%;
+            }
+            @include desktop {
+                padding: 150px 0 50px;
+                background-size: auto, 100% auto, 100% 90%;
+            }
+            @include desktop-extra-large {
+                background-size: auto, 100% auto, 100% 90%;
+            }
+        }
+
+
+        .results-page & {
+            background-color: #060815;
+        }
+    }
+    &__form {
+        background: url(#{$img}/stars.svg) no-repeat center bottom;
+        @include desktop {
+            padding-top: 100px;
+            background-size: 100%;
+        }
+    }
+
+    &_holder {
+        @include layout;
+        text-align: center;
+    }
+    &_title {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+    }
+    &_subtitle {
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+    &_text {
+        position: relative;
+        z-index: 1;
+        margin-top: -12px;
+        @include tablet {
+            margin-top: -24px;
+        }
+    }
+    &_person {
+        position: relative;
+        z-index: 2;
+        margin-top: -50px;
+        pointer-events: none;
+        @include desktop {
+            margin-top: 0;
+        }
+
+        &__left {
+            margin-left: auto;
+            margin-right: auto;
+            @include tablet {
+                margin: 40px auto 0;
+            }
+            @include desktop {
+                position: absolute;
+                bottom: 40px;
+                left: 15px;
+            }
+
+            .section__treasures & {
+                @include desktop {
+                    left: 100px;
+                }
+                @include desktop-large {
+                    left: 150px;
+                }
+            }
+        }
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+            margin-left: -$indent;
+            margin-right: -$indent;
+            @include desktop {
+                position: absolute;
+                bottom: 30px;
+                right: 120px;
+            }
+            @include desktop-large {
+                position: absolute;
+                bottom: 30px;
+                right: 170px;
+            }
+
+            .section__platforms & {
+                @include desktop {
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+}
