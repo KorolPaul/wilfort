@@ -1,12 +1,9 @@
 
 .menu {
-    background-color: #FBF9F5;
-    box-sizing: border-box;
-    position: fixed;
     z-index: 9;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 150px;
     align-items: center;
     height: 100%;
     overflow-y: auto;
@@ -16,132 +13,17 @@
     transform: translateX(0);
     transition: .6s $easingSmooth transform,
                 .3s $easingSmooth opacity .1s;
-    @include tablet {
-        background: none;
-        right: 0;
-        top: 0;
-        left: auto;
-        width: auto;
-        height: auto;
-        z-index: 11;
-        overflow-y: initial;
-        position: static;
-    }
 
     .menu-opened & {
         transform: translateX(-100%);
     }
 
-    &_list,
-    &_sublist {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-    &_list {
-        position: relative;
-        width: 100%;
-        @include tablet {
-            display: flex;
-            gap: 40px;
-        }
-    }
-    &_sublist {
-        display: none;
-        @include tablet {
-            display: block;
-            opacity: 0;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            pointer-events: none;
-            padding: 10px 16px;
-            background-color: $bg_color;
-            transition: .2s $easing opacity;
-        }
-
-        .menu_list-item.opened & {
-            display: block;
-            @include tablet {
-                
-                
-                border-radius: 10px;
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
-        .menu_list-item__parent:hover & {
-            @include tablet {
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
-    }
-    &_list-item,
-    &_sublist-item {
-        list-style: none;
-        margin: 12px 0;
-        text-align: center;
-        @include tablet {
-            margin: 0;
-        }
-    }
-    &_list-item.opened {
-        background-color: #FBF9F5;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        @include tablet {
-            position: relative;
-            background-color: transparent;
-        }
-    }
-    &_sublist-item {
-        text-align: right
-    }
     &_link {
         color: $color;
-        font-size: 24px;
-        line-height: 29px;
+        font-family: $font-family__heading;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
         white-space: nowrap;
-        @include tablet {
-            font-size: 17px;
-            line-height: 110%;
-        }
-
-        &__arrow {
-            @include tablet {
-                color: $cOrange;
-            }
-
-            &::after {
-                content: '';
-                display: inline-block;
-                background: url(#{$img}/down.svg) no-repeat center / 100%;
-                width: 10px;
-                height: 6px;
-                vertical-align: middle;
-                @include tablet {
-                    background: url(#{$img}/up-orange.svg) no-repeat center / 100%;
-                    transform: rotate(180deg);
-                }
-            }
-
-            .menu_list-item.opened & {
-                color: $cOrange;
-            }
-            .menu_list-item.opened &::after {
-                background: url(#{$img}/up-orange.svg) no-repeat center / 100%;
-                @include tablet {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-        .menu_sublist-item & {
-            @include tablet {
-                font-size: 15px;
-            }
-        }
     }
 }

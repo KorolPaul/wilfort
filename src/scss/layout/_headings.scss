@@ -16,24 +16,17 @@
 %heading-2 {
     @include gradiented-text(#FFE500, #FAB820, 180deg);
     font-family: $font-family__heading;
-    font-size: 30px;
-    line-height: 44px;
-    font-weight: 400;
-    margin: 0 0 10px;
-    letter-spacing: 0.02em;
-    filter: drop-shadow(0px 4px 4px rgba(253, 206, 22, 0.2)) drop-shadow(0px 3px 0px #B56B05) drop-shadow(0px 2px 0px #B56B05);
-    @include desktop {
-        font-size: 40px;
-        line-height: 48px;
-    }
+    font-size: 12px;
+    font-weight: 700;
+    margin: 130px 0 75px;
 }
 %heading-3 {
-    font-family: $font-family__heading;
+    font-family: $font-family;
     font-size: 32px;
     line-height: 1.2;
     font-weight: 400;
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     @include desktop {
         font-size: 32px;
     }

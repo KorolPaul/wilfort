@@ -1,0 +1,22 @@
+.slide {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    &_title {
+        font-size: 40px;
+        line-height: 1;
+        position: absolute;
+        left: 0;
+        top: 100px;
+    }
+    &_image {
+        width: 70%;
+    }
+    &_image-small {
+        position: absolute;
+        left: 0;
+        bottom: -200px;
+        width: 20%;
+    }
+}

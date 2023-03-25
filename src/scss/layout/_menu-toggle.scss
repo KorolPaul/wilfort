@@ -1,22 +1,16 @@
 .menu-toggle {
     @include button-reset;
-    position: absolute;
-    top: 26px;
-    right: $indent;
-    width: 21px;
-    height: 16px;
+    width: 28px;
+    height: 28px;
     z-index: 10;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: space-between;
-    @include desktop {
-        display: none;
-    }
 
     &_line {
-        width: 24px;
-        height: 2px;
+        width: 100%;
+        height: 4px;
         background: $color;
-        border-radius: 1px;
     }
 }

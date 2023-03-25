@@ -6,72 +6,15 @@
     top: 0;
     margin-bottom: 7px;
     z-index: 11;
-    @include tablet {
-        margin-bottom: 40px;
-    }
     
     &_holder {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 0;
-        @include tablet {
-            justify-content: center;
-        }
     }
-    &_logo {
-        display: none;
-        @include tablet {
-            display: block;
-            position: fixed;
-            left: 30px;
-            top: 0;
-            opacity: 0;
-            pointer-events: none;
-            transition: .2s $easing opacity;
-            z-index: 10;
-
-            img {
-                width: 122px;
-            }
-        }
-
-        .header__button-visible & {
-            opacity: 1;
-            pointer-events: all;
-        }
-    }
-    &_button-wrapper {
-        display: none;
-        @include tablet {
-            opacity: 0;
-            display: block;
-            position: fixed;
-            right: 30px;
-            top: 24px;
-            pointer-events: none;
-            transition: .2s $easing opacity;
-            z-index: 10;
-        }
-
-        .header__button-visible & {
-            @include tablet {
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
-    }
-    &_button {
-        @include button-reset;
-        @include hover-scale;
-        width: 164px;
-        height: 56px;
-        display: block;
-        background: url(#{$img}/header-button.svg) no-repeat center / 100% auto;
-
-        &:hover,
-        &:active {
-            opacity: 1;
-        }
+    &_menu-wrapper {
+        display: flex;
+        gap: 150px;
+        align-items: center;
     }
 }

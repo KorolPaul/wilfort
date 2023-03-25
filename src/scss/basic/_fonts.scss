@@ -1,17 +1,31 @@
 @font-face {
-    font-family: 'SeriesOrbit';
-    src: url('/src/fonts/SeriesOrbit.woff2') format('woff2'),
-        url('/src/fonts/SeriesOrbit.woff') format('woff');
+    font-family: 'YogaSansPro';
+    src: url('/src/fonts/YogaSansPro.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'LooseySans';
-    src: url('/src/fonts/loosey_sans-webfont.woff2') format('woff2'),
-        url('/src/fonts/loosey_sans-webfont.woff') format('woff');
+    font-family: 'YogaSansPro';
+    src: url('/src/fonts/YogaSansPro-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Signifier';
+    src: url('/src/fonts/signifier-regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Signifier';
+    src: url('/src/fonts/signifier-regular-italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }

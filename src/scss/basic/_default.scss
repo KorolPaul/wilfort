@@ -8,28 +8,18 @@ body {
     font: #{$font-size__small}/#{1.4} $font-family;
     padding: 0;
     scroll-behavior: smooth;
-    overflow: hidden;
     @include tablet {
         font-size: $font-size;
     }
 }
 
-.loaded {
-    overflow: auto;
-}
-
-.results-page {
-    background-color: #060815;
-}
-
 a {
-    color: $cYellow;
+    color: $color;
     text-decoration: none;
     transition: .2s $easing color;
 
     &:hover,
     &.hover {
-        color: $cOrange;
         outline: none;
     }
     &:active,
@@ -87,17 +77,4 @@ a[name] {
 
 .bright {
     color: $cOrange;
-}
-
-.mobile-only {
-    @include tablet {
-        display: none;
-    }
-}
-
-.desktop-only {
-    display: none;
-    @include tablet {
-        display: block;
-    }
 }
