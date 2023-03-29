@@ -1,5 +1,10 @@
 .advantage {
+    font-size: 58px;
+    width: 80%;
+    max-width: 1520px;
+    margin: auto;
+
     &_title {
-        font: 14px $font-family__heading;
+        font: 28px $font-family__heading;
     }
 }

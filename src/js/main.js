@@ -36,6 +36,10 @@ smallSlider.forEach(el => {
         navPosition: 'bottom',
         controls: false,
         loop: true,
+        prevButton: false,
+        autoplayButton: false,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 10000,
     });
 });
 

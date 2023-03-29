@@ -1,8 +1,16 @@
 .section {
     position: relative;
     overflow: visible;
+    margin-bottom: 110px;
     @include desktop {
         overflow: visible;
+    }
+
+    &__big-top-indent {
+        padding-top: 120px;
+        @include tablet {
+            padding-top: 140px;
+        }
     }
 
     &__dark {

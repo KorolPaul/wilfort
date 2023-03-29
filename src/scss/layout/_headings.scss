@@ -14,22 +14,19 @@
     }
 }
 %heading-2 {
-    @include gradiented-text(#FFE500, #FAB820, 180deg);
     font-family: $font-family__heading;
-    font-size: 12px;
+    font-size: 24px;
     font-weight: 700;
-    margin: 130px 0 75px;
+    margin: 130px 0 20px;
+    text-transform: uppercase;
 }
 %heading-3 {
     font-family: $font-family;
-    font-size: 32px;
+    font-size: 58px;
     line-height: 1.2;
     font-weight: 400;
     margin-top: 60px;
-    margin-bottom: 20px;
-    @include desktop {
-        font-size: 32px;
-    }
+    margin-bottom: 30px;
 }
 %heading-4 {
     font-family: $font-family__heading;

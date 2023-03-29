@@ -1,4 +1,12 @@
 .activity {
+    font-size: 58px;
+    width: 70%;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+    @include tablet {
+        margin-bottom: 110px;
+    }
+
     &_title {
         font-style: italic;
         text-decoration: underline;
@@ -9,6 +17,8 @@
         margin: 0 auto 20px;
     }
     &_disclaimer {
-        font: 14px $font-family__heading;
+        font: 28px $font-family__heading;
+        max-width: 900px;
+        margin: 40px auto 0;
     }
 }

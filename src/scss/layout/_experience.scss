@@ -1,0 +1,65 @@
+.experience {
+    position: relative;
+    text-align: right;
+
+    &_title {
+        margin: 0;
+        font: 400 80px $font-family;
+        text-transform: none;
+        text-align: left;
+        line-height: 1;
+        position: absolute;
+        left: 0;
+        top: 120px;
+        z-index: 3;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: 1s $easing transform,
+                .5s $easing opacity;
+
+        @include tablet {
+            max-width: 600px;
+        }
+
+        .animated & {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
+    &_image {
+        position: relative;
+        z-index: 1;
+        width: 75%;
+        opacity: 0;
+        transition: 3s $easing transform,
+            1s $easing opacity;
+        transform: translate(100%);
+
+        .animated & {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+    
+    &_image-small {
+        position: absolute;
+        z-index: 2;
+        left: -20px;
+        top: 40%;
+        width: 20%;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: 1.5s $easing transform,
+            .5s $easing opacity;
+
+        @include tablet {
+            bottom: -130px;
+        }
+
+        .animated & {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+}

@@ -1,73 +1,45 @@
 .footer {
-    padding: 0 0 28px;
+    padding: 0 0 70px;
     position: relative;
-    @include tablet {
-        padding-bottom: 44px;
-        background: url(#{$img}/form-bottom-left.png) no-repeat left bottom,
-                    url(#{$img}/form-bottom-right.png) no-repeat right bottom,
-    }
-
-    &::before {
-        content: '';
-        background: url(#{$img}/stars.svg) no-repeat center bottom,
-                    url(#{$img}/form-bg.svg) no-repeat center bottom / 100% 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 1864px;
-        pointer-events: none;
-        z-index: -1;
-        @include tablet {
-            height: 1260px;
-        }
-        @include desktop {
-            height: 1188px;
-        }
-    }
-
-    .results-page & {
-        background: transparent;
-        @include desktop {
-            margin-top: -250px;
-            z-index: 3;
-        }
-
-        &::before {
-            content: none;
-        }
-    }
+    font-family: $font-family__heading;
 
     &_holder {
         @include layout;
         position: relative;
     }
-    &_menu {
-        @include tablet {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            margin: 0 0 10px;
+    
+    &_contacts {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    &_contact {
+        display: block;
+        margin: 0 0 35px;
+
+        a {
+            display: block;
         }
     }
-    &_link {
-        color: $cYellow;
-        font-size: 14px;
-        line-height: 1.86;
-        text-align: center;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        margin: 0 0 8px;
-        display: block;
+    &_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 55px;
+        font-weight: bold;
+        font-size: 24px;
     }
-    &_copyrights {
-        font-size: 14px;
-        line-height: 1.43;
-        text-align: center;
-        letter-spacing: .5px;
-        text-transform: uppercase;
-        margin: 0 auto 30px;
-        max-width: 520px;
+    &_link {
+        position: relative;
+
+        &::before {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            top: 1px;
+            left: -25px;
+            width: 2px;
+            height: 24px;
+            background-color: $color;
+        }
     }
 }

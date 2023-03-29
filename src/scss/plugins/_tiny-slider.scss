@@ -70,6 +70,10 @@
 }
 .tns-ovh {
     // overflow: hidden;
+
+    .small-slider-wrapper & {
+        overflow: hidden;
+    }
 }
 .tns-visually-hidden {
     position: absolute;
@@ -165,6 +169,13 @@
     border: none;
     @include tablet {
         margin-top: 115px
+    }
+
+    .small-slider-wrapper & {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     button {
