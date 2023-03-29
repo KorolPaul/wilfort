@@ -6,9 +6,10 @@ body {
     color: $color;
     background: $bg_color;
     font: #{$font-size__small}/#{1.4} $font-family;
-    padding: 0;
+    padding: 160px 0 0;
     scroll-behavior: smooth;
     @include tablet {
+        padding-top: 140px;
         font-size: $font-size;
     }
 }
@@ -20,6 +21,7 @@ a {
 
     &:hover,
     &.hover {
+        text-decoration: underline;
         outline: none;
     }
     &:active,

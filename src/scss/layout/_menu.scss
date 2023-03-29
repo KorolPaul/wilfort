@@ -7,28 +7,41 @@
     align-items: center;
     height: 100%;
     overflow-y: auto;
-    left: 100%;
-    top: 0;
-    width: 100%;
-    transform: translateX(0);
-    transition: .6s $easingSmooth transform,
-                .3s $easingSmooth opacity .1s;
+    transition: .2s $easingSmooth opacity;
 
-    .menu-opened & {
-        transform: translateX(-100%);
+    .menu-hidden & {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: -16px;
+        top: -16px;
+        padding: 56px 16px 16px 16px;
+        background-color: $bg_color;
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+        align-items: flex-end;
+    }
+
+    .menu-hidden.menu-opened & {
+        opacity: 1;
+        pointer-events: all;
     }
 
     &_link {
         color: $color;
         font-family: $font-family__heading;
-        font-size: 12px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 1;
         white-space: nowrap;
 
-
         &:hover {
             text-decoration: underline;
+        }
+
+        .menu-hidden & {
+            font-size: 20px;
         }
     }
 }

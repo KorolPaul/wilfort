@@ -1,9 +1,10 @@
 const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 const thresholdSteps = [...Array(10).keys()].map(i => i / 10);
+const isMobile = window.innerWidth <= 768
 
 // sliders
-const mainSlider = document.querySelectorAll('.slider');
-mainSlider.forEach(el => {
+const mainider = document.querySelectorAll('.slider');
+mainider.forEach(el => {
     tns({
         container: el,
         items: 1,
@@ -15,6 +16,10 @@ mainSlider.forEach(el => {
         navPosition: 'bottom',
         controls: true,
         loop: true,
+        prevButton: false,
+        autoplayButton: false,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 10000,
     });
 });
 
@@ -49,28 +54,16 @@ function closeAllOpened() {
     document.querySelectorAll('.filters_content').forEach(el => el.classList.remove('opened'));
 }
 
-/* hide header buttons when first section visible */
-const headerEl = document.querySelector('.header')
-const showcaseEl = document.querySelector('.section__showcase')
+/* hide menu on scroll */
+window.addEventListener('scroll', function(e) {
+    if (window.pageYOffset > 200) {
+        document.body.classList.add('menu-hidden');
+    } else {
+        document.body.classList.remove('menu-opened');
+        document.body.classList.remove('menu-hidden');
+    }
+})
 
-if (headerEl && showcaseEl) {
-    const observerCallback = function (e) {
-        const { intersectionRatio } = e[0];
-
-        if (intersectionRatio < 0.1) {
-            headerEl.classList.add('header__button-visible');
-        } else {
-            headerEl.classList.remove('header__button-visible');
-        }
-    };
-
-    const observer = new IntersectionObserver(observerCallback, {
-        rootMargin: '0px 0px 0px 0px',
-        threshold: thresholdSteps,
-        root: null
-    });
-    observer.observe(showcaseEl)
-}
 
 /* appaerance animation */
 const animatedElements = document.querySelectorAll('.js-animation, .section_title, .section_subtitle');

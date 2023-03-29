@@ -2,21 +2,60 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    text-align: left;
 
     &_title {
-        font-size: 40px;
+        font-size: 80px;
         line-height: 1;
         position: absolute;
         left: 0;
-        top: 100px;
+        top: 120px;
+        z-index: 3;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: 1s $easing transform,
+                    .5s $easing opacity;
+        @include tablet {
+            max-width: 550px;
+        }
+
+        .tns-slide-active & {
+            transform: translate(0);
+            opacity: 1;
+        }
     }
     &_image {
-        width: 70%;
+        position: relative;
+        z-index: 1;
+        width: 75%;
+        opacity: 0;
+        transition: 3s $easing transform,
+                    1s $easing opacity;
+        transform: translate(100%);
+
+        .tns-slide-active & {
+            transform: translate(0);
+            opacity: 1;
+        }
     }
     &_image-small {
         position: absolute;
+        z-index: 2;
         left: 0;
-        bottom: -200px;
+        bottom: -60px;
         width: 20%;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: 1.5s $easing transform,
+                    .5s $easing opacity;
+        @include tablet {
+            bottom: -130px;
+            left: 105px;
+        }
+
+        .tns-slide-active & {
+            transform: translate(0);
+            opacity: 1;
+        }
     }
 }
