@@ -1,16 +1,20 @@
 textarea {
-    @include placeholder-color($color);
+    @include placeholder-color($cGray);
     color: $color;
-    background: rgba(255, 255, 255, .1);
-    border: 2px solid rgba(174, 189, 216, 0.5);
-    border-radius: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $cGray;
+    border-radius: 0;
     box-sizing: border-box;
-    font: 18px $font-family;
-    padding: 18px 22px;
-    width: 100%;
+    font: 16px $font-family__heading;
+    height: 58px;
+    line-height: 58px;
+    padding: 0 22px;
+    text-align: center;
     resize: none;
-    height: 200px;
+    height: 100px;
     margin: 0;
+    width: 100%;
 
     &:focus,
     &.focus {

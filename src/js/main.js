@@ -2,8 +2,8 @@ const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mouse
 const thresholdSteps = [...Array(10).keys()].map(i => i / 10);
 
 // sliders
-const mainider = document.querySelectorAll('.slider');
-mainider.forEach(el => {
+const mainSlider = document.querySelectorAll('.slider');
+mainSlider.forEach(el => {
     tns({
         container: el,
         items: 1,
@@ -16,7 +16,23 @@ mainider.forEach(el => {
         controls: true,
         loop: true,
     });
-})
+});
+
+const smallSlider = document.querySelectorAll('.small-slider');
+smallSlider.forEach(el => {
+    tns({
+        container: el,
+        items: 1,
+        center: true,
+        gutter: 0,
+        mouseDrag: true,
+        autoplay: true,
+        nav: true,
+        navPosition: 'bottom',
+        controls: false,
+        loop: true,
+    });
+});
 
 // menu
 const menuToggleElement = document.querySelector('.menu-toggle');

@@ -25,5 +25,10 @@
         font-weight: 700;
         line-height: 1;
         white-space: nowrap;
+
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
