@@ -6,7 +6,7 @@
     box-sizing: border-box;
     padding: 160px 0 0;
     @include tablet {
-        perspective: 1px;
+        perspective: 2px;
         perspective-origin: top center;
         scroll-behavior: smooth;
         transform-style: preserve-3d;

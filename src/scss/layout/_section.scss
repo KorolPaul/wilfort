@@ -43,7 +43,7 @@
         margin-top: -60px;
         @include tablet {
             margin: 0;
-            transform: translateY(100%) translateZ(-0.75px) scale(1.75);
+            transform: translateY(75%) translateZ(-0.75px) scale(1.75);
         }
     }
 }
