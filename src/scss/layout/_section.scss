@@ -1,10 +1,6 @@
 .section {
     position: relative;
-    overflow: visible;
     margin-bottom: 110px;
-    @include desktop {
-        overflow: visible;
-    }
 
     &__big-top-indent {
         padding-top: 120px;
@@ -23,11 +19,17 @@
         }
     }
 
+    &__overflow {
+        overflow: hidden;
+        max-width: 100vw;
+    }
+
     &_holder {
         @include layout;
         text-align: center;
     }
     &_title {
+        @include appearance();
         margin-left: auto;
         margin-right: auto;
         position: relative;

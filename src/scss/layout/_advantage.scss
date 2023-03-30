@@ -5,6 +5,10 @@
     margin: auto;
 
     &_title {
+        @include appearance;
         font: 28px $font-family__heading;
+    }
+    &_text {
+        @include appearance(.2s);
     }
 }

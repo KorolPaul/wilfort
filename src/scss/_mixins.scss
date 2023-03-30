@@ -49,26 +49,22 @@
     }
 }
 
-@mixin hover-scale {
-    transition: .2s $easing transform;
-
-    &:hover {
-        transform: scale(1.1) !important;
-    }
-    &:active {
-        transform: scale(.95) !important;
-    }
-}
-
-@mixin gradiented-text($color1, $color2, $degree: 65deg) {
-    @supports(-webkit-background-clip: text) {
-        background: linear-gradient($degree, $color1 0%, $color2 40%,$color2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-    }
-}
-
 @function vw($px) {
     @return $px * 0.068vw
+}
+
+@mixin appearance($delay: 0s) {
+    transform: translateY(120%);
+    opacity: 0;
+    filter: blur(2px);
+    transition: .6s $easing transform $delay,
+                .8s $easeInOutCirc filter $delay,
+                .8s $easing opacity $delay;
+
+    .animated &,
+    &.animated {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
 }

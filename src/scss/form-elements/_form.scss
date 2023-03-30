@@ -6,12 +6,15 @@
     border-bottom: 2px solid currentColor;
 
     &_title {
+        @include appearance;
         margin: 0 0 40px;
     }
 
     &_row {
+        @include appearance(.2s);
         margin: 0 0 20px;
         position: relative;
+
     }
 
     &_error {

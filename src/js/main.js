@@ -70,10 +70,10 @@ window.addEventListener('scroll', function(e) {
 
 
 /* appaerance animation */
-const animatedElements = document.querySelectorAll('.js-animation, .section_title, .section_subtitle');
+const animatedElements = document.querySelectorAll('.js-animation, .section_title');
 
 if (animatedElements.length) {
-    const ratio = isMobile ? 0.2 : 0.5
+    const ratio = isMobile ? 0.2 : 0.3;
     const observerCallback = function (e) {
         const { target, intersectionRatio } = e[0];
         if (intersectionRatio > ratio) {

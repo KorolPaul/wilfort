@@ -2,4 +2,11 @@
     width: 80%;
     max-width: 780px;
     margin: 0 auto 100px;
+
+    &_title {
+        @include appearance;
+    }
+    &_text {
+        @include appearance(.2s);
+    }
 }

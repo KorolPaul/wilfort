@@ -3,6 +3,7 @@
     text-align: right;
 
     &_title {
+        @include appearance;
         margin: 0;
         font: 400 80px $font-family;
         text-transform: none;
@@ -12,54 +13,28 @@
         left: 0;
         top: 120px;
         z-index: 3;
-        transform: translate(-100%);
-        opacity: 0;
-        transition: 1s $easing transform,
-                .5s $easing opacity;
-
         @include tablet {
             max-width: 600px;
-        }
-
-        .animated & {
-            transform: translate(0);
-            opacity: 1;
         }
     }
 
     &_image {
+        @include appearance(.2s);
         position: relative;
         z-index: 1;
         width: 75%;
-        opacity: 0;
-        transition: 3s $easing transform,
-            1s $easing opacity;
-        transform: translate(100%);
-
-        .animated & {
-            transform: translate(0);
-            opacity: 1;
-        }
     }
     
     &_image-small {
+        @include appearance(.4s);
         position: absolute;
         z-index: 2;
         left: -20px;
         top: 40%;
         width: 20%;
-        transform: translate(-100%);
-        opacity: 0;
-        transition: 1.5s $easing transform,
-            .5s $easing opacity;
 
         @include tablet {
             bottom: -130px;
-        }
-
-        .animated & {
-            transform: translate(0);
-            opacity: 1;
         }
     }
 }
