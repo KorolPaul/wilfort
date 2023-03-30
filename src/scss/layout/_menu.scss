@@ -26,6 +26,12 @@
         height: 100%;
         align-items: center;
     }
+    
+    .menu-hidden-transition & {
+        @include desktop {
+            display: none;
+        }
+    }
 
     .menu-opened & {
         opacity: 1;

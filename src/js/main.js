@@ -20,6 +20,7 @@ mainider.forEach(el => {
         autoplayButton: false,
         autoplayButtonOutput: false,
         autoplayTimeout: 10000,
+        mode: 'gallery',
     });
 });
 
@@ -63,10 +64,15 @@ const parallaxElement = document.querySelector('.parallax');
 parallaxElement.addEventListener('scroll', function(e) {
     if (parallaxElement.scrollTop > 200) {
         document.body.classList.add('menu-hidden');
+        document.body.classList.add('menu-hidden-transition');
     } else {
         document.body.classList.remove('menu-opened');
         document.body.classList.remove('menu-hidden');
     }
+
+    setTimeout(() => {
+        document.body.classList.remove('menu-hidden-transition');
+    }, 500);
 })
 
 

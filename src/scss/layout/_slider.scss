@@ -18,11 +18,11 @@
                     .5s $easing opacity;
         @include tablet {
             font-size: 80px;
-            max-width: 550px;
+            max-width: 500px;
             left: 0;
-            top: 120px;
+            top: 4vw;
             bottom: auto;
-            min-width: none;
+            min-width: 0;
         }
 
         .tns-slide-active & {
@@ -43,7 +43,7 @@
                     .2s $easing opacity;
         transform: translate(100%);
         @include tablet {
-            width: 75%;
+            width: 80%;
             margin: 0;
         }
 
