@@ -82,9 +82,13 @@ const animatedElements = document.querySelectorAll('.js-animation, .section_titl
 if (animatedElements.length) {
     animatedElements.forEach(el => {
         const isActivityTextEl = el.classList.contains('activity_text');
-        const ratio = (isMobile || isActivityTextEl) ? 0.05 : 0.3;
+        const ratio = (isMobile || isActivityTextEl) ? 0.0005 : 0.3;
+
         const observerCallback = function (e) {
             const { target, intersectionRatio } = e[0];
+            if (isActivityTextEl) {
+                console.log(intersectionRatio);
+            }
             if (intersectionRatio > ratio) {
                 target.classList.add('animated');
             }

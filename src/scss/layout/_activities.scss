@@ -11,7 +11,7 @@
         margin-bottom: 110px;
         font-size: 48px;
     }
-    @include desktop {
+    @include desktop-large {
         font-size: 58px;
     }
 
@@ -22,8 +22,8 @@
         margin-bottom: 40px;
     }
     &_text {
-        @include appearance(.2s);
-        transform: translateY(50%);
+        @include appearance;
+        transform: translateY(30%);
     }
     &_image {
         @include appearance;

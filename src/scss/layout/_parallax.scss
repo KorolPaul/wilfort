@@ -10,6 +10,9 @@
         perspective-origin: top center;
         scroll-behavior: smooth;
         transform-style: preserve-3d;
+        padding-top: 120px;
+    }
+    @include desktop-large {
         padding-top: 150px;
     }
 }
