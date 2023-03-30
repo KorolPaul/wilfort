@@ -1,13 +1,13 @@
 .form {
     max-width: 900px;
-    padding: 20px 0 0;
+    padding: 34px 0 0;
     margin: auto;
     border-top: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
 
     &_title {
         @include appearance;
-        margin: 0 0 40px;
+        margin: 0 0 90px;
     }
 
     &_row {
@@ -31,4 +31,8 @@
         }
     }
 
+    input[type="submit"] {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }

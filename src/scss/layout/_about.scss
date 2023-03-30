@@ -3,10 +3,17 @@
     width: 80%;
     max-width: 780px;
     margin: auto;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
+    @include tablet {
+        font-size: 24px;
+    }
 
     &_text {
         @include appearance(.1s);
+        font-size: 24px;
+        @include tablet {
+            font-size: 32px;
+        }
     }
 }

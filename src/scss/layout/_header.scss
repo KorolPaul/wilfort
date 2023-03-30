@@ -4,14 +4,13 @@
     left: 0;
     right: 0;
     top: 0;
-    margin-bottom: 7px;
     z-index: 11;
     
     &_holder {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 36px;
+        padding-top: 26px;
         gap: 40px;
     }
     &_menu-wrapper {

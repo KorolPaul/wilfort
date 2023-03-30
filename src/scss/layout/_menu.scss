@@ -3,24 +3,49 @@
     z-index: 9;
     display: flex;
     justify-content: flex-end;
-    gap: 150px;
-    align-items: center;
-    height: 100%;
-    overflow-y: auto;
+    align-items: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    padding: 56px 16px 16px 16px;
+    background-color: $bg_color;
+    flex-direction: column;
+    gap: 16px;
+
     transition: .2s $easingSmooth opacity;
+    @include desktop {
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: all;
+        position: static;
+        padding: 0;
+        background-color: transparent;
+        gap:150px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .menu-opened & {
+        opacity: 1;
+        pointer-events: all;
+    }
 
     .menu-hidden & {
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        right: -16px;
-        top: -16px;
-        padding: 56px 16px 16px 16px;
-        background-color: $bg_color;
-        flex-direction: column;
-        height: auto;
-        gap: 16px;
-        align-items: flex-end;
+        @include desktop {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            right: -16px;
+            top: -16px;
+            padding: 56px 16px 16px 16px;
+            background-color: $bg_color;
+            flex-direction: column;
+            gap: 16px;
+            height: auto;
+            align-items: flex-end;
+        }
     }
 
     .menu-hidden.menu-opened & {
@@ -35,6 +60,7 @@
         font-weight: 700;
         line-height: 1;
         white-space: nowrap;
+        letter-spacing: .5px;
 
         &:hover {
             text-decoration: underline;

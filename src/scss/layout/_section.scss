@@ -1,9 +1,12 @@
 .section {
     position: relative;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 110px;
+    }
 
     &__big-top-indent {
-        padding-top: 120px;
+        padding-top: 80px;
         @include tablet {
             padding-top: 140px;
         }
@@ -12,10 +15,11 @@
     &__dark {
         background-color: $color;
         color: $bg_color;
-        padding: 90px 0;
+        padding: 110px 0;
+        transform: translateZ(0);
         @include tablet {
-            padding-top: 130px;
-            padding-bottom: 130px;
+            padding-top: 140px;
+            padding-bottom: 140px;
         }
     }
 
@@ -35,71 +39,11 @@
         position: relative;
         z-index: 1;
     }
-    &_subtitle {
-        margin: 0;
-        position: relative;
-        z-index: 1;
-    }
-    &_text {
-        position: relative;
-        z-index: 1;
-        margin-top: -12px;
+    &_image {
+        margin-top: -60px;
         @include tablet {
-            margin-top: -24px;
-        }
-    }
-    &_person {
-        position: relative;
-        z-index: 2;
-        margin-top: -50px;
-        pointer-events: none;
-        @include desktop {
-            margin-top: 0;
-        }
-
-        &__left {
-            margin-left: auto;
-            margin-right: auto;
-            @include tablet {
-                margin: 40px auto 0;
-            }
-            @include desktop {
-                position: absolute;
-                bottom: 40px;
-                left: 15px;
-            }
-
-            .section__treasures & {
-                @include desktop {
-                    left: 100px;
-                }
-                @include desktop-large {
-                    left: 150px;
-                }
-            }
-        }
-        &__right {
-            display: flex;
-            justify-content: flex-end;
-            text-align: right;
-            margin-left: -$indent;
-            margin-right: -$indent;
-            @include desktop {
-                position: absolute;
-                bottom: 30px;
-                right: 120px;
-            }
-            @include desktop-large {
-                position: absolute;
-                bottom: 30px;
-                right: 170px;
-            }
-
-            .section__platforms & {
-                @include desktop {
-                    bottom: -20px;
-                }
-            }
+            margin: 0;
+            transform: translateY(100%) translateZ(-0.75px) scale(1.75);
         }
     }
 }

@@ -1,20 +1,23 @@
 .experience {
     position: relative;
     text-align: right;
+    padding-top: 80px;;
 
     &_title {
         @include appearance;
         margin: 0;
-        font: 400 80px $font-family;
+        font: 400 40px $font-family;
         text-transform: none;
         text-align: left;
         line-height: 1;
-        position: absolute;
-        left: 0;
-        top: 120px;
         z-index: 3;
+        margin-bottom: 100px;
         @include tablet {
+            position: absolute;
+            left: 0;
+            top: 200px;
             max-width: 600px;
+            font-size: 80px
         }
     }
 
@@ -22,19 +25,23 @@
         @include appearance(.2s);
         position: relative;
         z-index: 1;
-        width: 75%;
+        width: 90%;
+        @include tablet {
+            width: 75%;
+        }
     }
     
     &_image-small {
         @include appearance(.4s);
         position: absolute;
         z-index: 2;
-        left: -20px;
-        top: 40%;
+        left: 0;
+        top: 35%;
         width: 20%;
-
         @include tablet {
             bottom: -130px;
+            left: -20px;
+            top:40%;
         }
     }
 }

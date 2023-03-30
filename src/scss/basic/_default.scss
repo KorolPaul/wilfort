@@ -6,10 +6,10 @@ body {
     color: $color;
     background: $bg_color;
     font: #{$font-size__small}/#{1.2} $font-family;
-    padding: 160px 0 0;
+    padding: 0;
     scroll-behavior: smooth;
+    overflow: hidden;
     @include tablet {
-        padding-top: 140px;
         font-size: $font-size;
     }
 }

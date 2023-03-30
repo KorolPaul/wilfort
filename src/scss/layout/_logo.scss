@@ -1,5 +1,10 @@
 .logo {
     display: block;
+    width: 180px;
+    @include tablet {
+        flex-shrink: 0;
+        width: auto;
+    }
 
     &_image {
         display: block;

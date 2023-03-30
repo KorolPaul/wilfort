@@ -59,8 +59,9 @@ function closeAllOpened() {
 }
 
 /* hide menu on scroll */
-window.addEventListener('scroll', function(e) {
-    if (window.pageYOffset > 200) {
+const parallaxElement = document.querySelector('.parallax');
+parallaxElement.addEventListener('scroll', function(e) {
+    if (parallaxElement.scrollTop > 200) {
         document.body.classList.add('menu-hidden');
     } else {
         document.body.classList.remove('menu-opened');
@@ -73,15 +74,16 @@ window.addEventListener('scroll', function(e) {
 const animatedElements = document.querySelectorAll('.js-animation, .section_title');
 
 if (animatedElements.length) {
-    const ratio = isMobile ? 0.2 : 0.3;
-    const observerCallback = function (e) {
-        const { target, intersectionRatio } = e[0];
-        if (intersectionRatio > ratio) {
-            target.classList.add('animated');
-        }
-    };
-
     animatedElements.forEach(el => {
+        const isActivityTextEl = el.classList.contains('activity_text');
+        const ratio = (isMobile || isActivityTextEl) ? 0.1 : 0.3;
+        const observerCallback = function (e) {
+            const { target, intersectionRatio } = e[0];
+            if (intersectionRatio > ratio) {
+                target.classList.add('animated');
+            }
+        };
+
         const observer = new IntersectionObserver(observerCallback, {
             rootMargin: '0px 0px -15% 0px',
             threshold: thresholdSteps,
