@@ -1,6 +1,9 @@
 .logo {
     display: block;
     width: 180px;
+    position: absolute;
+    left: $indent;
+    top: 26px;
     @include tablet {
         flex-shrink: 0;
         width: auto;

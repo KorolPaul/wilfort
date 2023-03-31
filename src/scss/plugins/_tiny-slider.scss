@@ -126,6 +126,10 @@
     float: left;
 }
 
+.small-slider-wrapper {
+    position: relative;
+}
+
 .tns-controls {
     position: absolute;
     left: 0;
@@ -135,6 +139,15 @@
     gap: 24px;
     margin: 0 0 40px;
     z-index: 2;
+
+    .small-slider-wrapper & {
+        position: static;
+
+        button {
+            position: absolute;
+            z-index: 2;
+        }
+    }
 
     button {
         @include button-reset;
@@ -154,10 +167,25 @@
     }
 
     button[data-controls="prev"]{
+        background: url(#{$img}/prev.png) no-repeat center / 100%;
         display: none;
     }
     button[data-controls="next"]{
-        background: url(#{$img}/next.png) no-repeat center;
+        background: url(#{$img}/next.png) no-repeat center / 100%;
+    }
+
+    .small-slider-wrapper & button[data-controls="prev"] {
+        display: block;
+        left: 32px;
+        top: 50%;
+        width: 13px;
+        height: 24px;
+    }
+    .small-slider-wrapper & button[data-controls="next"] {
+        right: 32px;
+        top: 50%;
+        width: 13px;
+        height: 24px;
     }
 }
 
@@ -182,6 +210,7 @@
         position: absolute;
         bottom: 30px;
         left: 50%;
+        top: auto;
         transform: translateX(-50%);
     }
 

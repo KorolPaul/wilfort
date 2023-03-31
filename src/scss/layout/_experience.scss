@@ -63,9 +63,8 @@
         transition: 1.5s $easing transform .2s,
                     .5s $easing opacity;
         @include tablet {
-            bottom: -130px;
             left: -20px;
-            top:40%;
+            top: 30%;
         }
 
         .animated & {

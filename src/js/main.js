@@ -36,7 +36,7 @@ smallSlider.forEach(el => {
         autoplay: true,
         nav: true,
         navPosition: 'bottom',
-        controls: false,
+        controls: true,
         loop: true,
         prevButton: false,
         autoplayButton: false,
@@ -64,7 +64,9 @@ function closeAllOpened() {
 window.addEventListener('scroll', function(e) {
     if (window.pageYOffset > 200) {
         document.body.classList.add('menu-hidden');
-        document.body.classList.add('menu-hidden-transition');
+        if (!document.body.classList.contains('menu-opened')) {
+            document.body.classList.add('menu-hidden-transition');
+        }
     } else {
         document.body.classList.remove('menu-opened');
         document.body.classList.remove('menu-hidden');
@@ -81,7 +83,9 @@ const animatedElements = document.querySelectorAll('.js-animation, .section_titl
 
 if (animatedElements.length) {
     animatedElements.forEach(el => {
-        let ratio = isMobile ? 0.0005 : 0.3;
+        const isExpericenceBlock = el.classList.contains('experience');
+
+        let ratio = (1)? 0.0005 : 0.3;
         if (el.classList.contains('section_image-wrapper') && !isMobile) {
             ratio = 0.6;
         }

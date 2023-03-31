@@ -26,6 +26,15 @@
         display: block;
         border-radius: 50%;
         margin: 0 auto 0px;
+        transform: scale(0);
+        opacity: 0;
+        transition: .3s $easingSmooth opacity,
+                    .6s $easingSmooth transform;
+
+        &.animated {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
     &_image + h3 {
         margin-top: 30px;
