@@ -11,7 +11,7 @@
     }
 
     &_title {
-        @include appearance;
+        // @include appearance;
         font: 24px $font-family__heading;
         margin-bottom: 40px;
         @include tablet {
@@ -19,6 +19,6 @@
         }
     }
     &_text {
-        @include appearance(.2s);
+        // @include appearance(.2s);
     }
 }

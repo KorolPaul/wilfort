@@ -54,7 +54,7 @@
 }
 
 @mixin appearance($delay: 0s) {
-    transform: translateY(120%);
+    transform: translateY(90%);
     opacity: 0;
     filter: blur(2px);
     transition: 1s $easing transform $delay,
