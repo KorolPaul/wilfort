@@ -61,9 +61,8 @@ function closeAllOpened() {
 }
 
 /* hide menu on scroll */
-const parallaxElement = document.querySelector('.parallax');
-parallaxElement.addEventListener('scroll', function(e) {
-    if (parallaxElement.scrollTop > 200) {
+window.addEventListener('scroll', function(e) {
+    if (window.pageYOffset > 200) {
         document.body.classList.add('menu-hidden');
         document.body.classList.add('menu-hidden-transition');
     } else {
@@ -82,14 +81,13 @@ const animatedElements = document.querySelectorAll('.js-animation, .section_titl
 
 if (animatedElements.length) {
     animatedElements.forEach(el => {
-        const isActivityTextEl = el.classList.contains('activity_text');
-        const ratio = (isMobile || isActivityTextEl) ? 0.0005 : 0.3;
+        let ratio = isMobile ? 0.0005 : 0.3;
+        if (el.classList.contains('section_image-wrapper') && !isMobile) {
+            ratio = 0.6;
+        }
 
         const observerCallback = function (e) {
             const { target, intersectionRatio } = e[0];
-            if (isActivityTextEl) {
-                console.log(intersectionRatio);
-            }
             if (intersectionRatio > ratio) {
                 target.classList.add('animated');
             }
