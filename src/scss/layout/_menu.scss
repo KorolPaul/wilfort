@@ -22,12 +22,12 @@
         position: static;
         padding: 0;
         background-color: transparent;
-        gap: 100px;
+        gap: 50px;
         height: 100%;
         align-items: center;
     }
     @include desktop-large {
-        gap: 150px;
+        gap: 100px;
     }
     
     .menu-hidden-transition & {
@@ -71,10 +71,10 @@
         white-space: nowrap;
         letter-spacing: .5px;
         @include tablet {
-            font-size: 18px;
+            font-size: 16px;
         }
         @include desktop-large {
-            font-size: 24px;
+            font-size: 22px;
         }
 
         &:hover {

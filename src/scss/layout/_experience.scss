@@ -1,10 +1,9 @@
 .experience {
     position: relative;
     text-align: right;
-    padding-top: 80px;;
+    padding-top: 80px;
 
     &_title {
-        @include appearance;
         margin: 0;
         font: 400 40px $font-family;
         text-transform: none;
@@ -12,36 +11,68 @@
         line-height: 1;
         z-index: 3;
         margin-bottom: 100px;
+        opacity: 0;
+        transition: 1.3s $easing transform .2s,
+                .5s $easing opacity .2s;
         @include tablet {
             position: absolute;
             left: 0;
-            top: 200px;
-            max-width: 600px;
-            font-size: 80px
+            top: 3vw;
+            font-size: 65px;
+            max-width: 450px;
+        }
+        @include desktop-large {
+            font-size: 80px;
+            max-width: 500px;
+            top: 2vw;
+        }
+
+        .animated & {
+            // transform: translate(-50%, 0);
+            opacity: 1;
         }
     }
 
     &_image {
-        @include appearance(.2s);
         position: relative;
         z-index: 1;
         width: 90%;
+        transform: translate(100%);
+        transition: .5s $easing transform .3s,
+                .3s $easing opacity;
         @include tablet {
-            width: 75%;
+            width: 70%;
+        }
+
+        .animated & {
+            transform: translate(0);
+            opacity: 1;
+            transition: 2.5s $easing transform,
+                        1s $easing opacity;
         }
     }
     
     &_image-small {
-        @include appearance(.4s);
         position: absolute;
         z-index: 2;
         left: 0;
         top: 35%;
         width: 20%;
+        transform: translate(-100%);
+        opacity: 0;
+        transition: 1.5s $easing transform .2s,
+                    .5s $easing opacity;
         @include tablet {
             bottom: -130px;
             left: -20px;
             top:40%;
+        }
+
+        .animated & {
+            transform: translate(0);
+            opacity: 1;
+            transition: 1s $easing transform .5s,
+                    .5s $easing opacity .5s;
         }
     }
 }

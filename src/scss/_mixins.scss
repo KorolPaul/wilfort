@@ -57,7 +57,7 @@
     transform: translateY(120%);
     opacity: 0;
     filter: blur(2px);
-    transition: .6s $easing transform $delay,
+    transition: 1s $easing transform $delay,
                 .8s $easeInOutCirc filter $delay,
                 .8s $easing opacity $delay;
 

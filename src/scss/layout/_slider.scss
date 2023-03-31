@@ -11,7 +11,7 @@
         left: 50%;
         bottom: 0;
         z-index: 3;
-        transform: translate(-100%, 0);
+        // transform: translate(-100%, 0);
         opacity: 0;
         min-width: 50%;
         transition: 1.3s $easing transform .2s,
@@ -20,21 +20,19 @@
             font-size: 65px;
             max-width: 450px;
             left: 0;
-            top: 4vw;
+            top: 3vw;
             bottom: auto;
             min-width: 0;
         }
         @include desktop-large {
             font-size: 80px;
             max-width: 500px;
+            top: 2vw;
         }
 
         .tns-slide-active & {
-            transform: translate(-50%, 0);
+            // transform: translate(-50%, 0);
             opacity: 1;
-            @include tablet {
-                transform: translate(0);
-            }
         }
     }
     &_image {
@@ -43,8 +41,8 @@
         width: 90%;
         opacity: 0;
         margin-bottom: 50vw;
-        transition: .5s $easing transform,
-                    .2s $easing opacity;
+        transition: .5s $easing transform .3s,
+                    .3s $easing opacity;
         transform: translate(100%);
         @include tablet {
             width: 70%;
@@ -66,7 +64,7 @@
         width: 20%;
         transform: translate(-100%);
         opacity: 0;
-        transition: 1.5s $easing transform,
+        transition: 1.5s $easing transform .2s,
                     .5s $easing opacity;
         @include tablet {
             bottom: -130px;

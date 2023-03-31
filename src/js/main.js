@@ -21,6 +21,7 @@ mainider.forEach(el => {
         autoplayButtonOutput: false,
         autoplayTimeout: 10000,
         mode: 'gallery',
+        speed: 600,
     });
 });
 
