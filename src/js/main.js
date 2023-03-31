@@ -85,7 +85,7 @@ if (animatedElements.length) {
     animatedElements.forEach(el => {
         const isExpericenceBlock = el.classList.contains('experience');
 
-        let ratio = (isMobile || isExpericenceBlock )? 0.0005 : 0.3;
+        let ratio = (isMobile || isExpericenceBlock ) ? 0.0005 : 0.3;
         if (el.classList.contains('section_image-wrapper') && !isMobile) {
             ratio = 0.6;
         }
