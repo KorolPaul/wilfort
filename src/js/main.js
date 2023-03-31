@@ -19,7 +19,7 @@ mainider.forEach(el => {
         prevButton: false,
         autoplayButton: false,
         autoplayButtonOutput: false,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 7000,
         mode: 'gallery',
         speed: 600,
     });
