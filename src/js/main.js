@@ -106,7 +106,7 @@ if (animatedElements.length) {
 
 /* form */
 const feedbackAPiUrl = 'https://api.herowarsportal.com/api/feedback';
-const submitEl = document.querySelector('.form_submit');
+const submitEl = document.querySelector('.form input[type="submit"]');
 
 const validateEmail = (email) => {
     return String(email)
@@ -118,23 +118,28 @@ const validateEmail = (email) => {
 
 if (submitEl) {
     submitEl.addEventListener('click', (e) => {
+        const name = document.getElementById('name');
         const email = document.getElementById('email');
-        const question = document.getElementById('question');
+        const message = document.getElementById('message');
 
         if (email.value === '' || !validateEmail(email.value)) {
             email.parentElement.classList.add('error')
         }
-        if (question.value === '') {
-            question.parentElement.classList.add('error')
+        if (message.value === '') {
+            message.parentElement.classList.add('error')
+        }
+        if (name.value === '') {
+            name.parentElement.classList.add('error')
         }
 
-        if (email.value === '' || !validateEmail(email.value) || question.value === '') {
+        if (email.value === '' || !validateEmail(email.value) || message.value === '' || name.value === '') {
             return
         }
 
         email.parentElement.classList.remove('error');
-        question.parentElement.classList.remove('error');
+        message.parentElement.classList.remove('error');
 
+        /*
         fetch(feedbackAPiUrl, {
             method: 'POST',
             headers: {
@@ -142,12 +147,12 @@ if (submitEl) {
             },
             body: JSON.stringify({
                 email: email.value,
-                question: question.value,
+                question: message.value,
             })
         }).then(() => {
             e.target.setAttribute('disabled', true)
         })
-
+         */
         
     });
 }

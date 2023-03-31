@@ -29,6 +29,7 @@ input[type="tel"] {
     }
 
     .error & {
+        @include placeholder-color($cRed);
         border-color: $cRed;
     }
 }
