@@ -1,0 +1,10 @@
+.small-slider {
+    &_image {
+        opacity: 0;
+        transition: .3s $easingSmooth opacity .1s;
+
+        .tns-slide-active & {
+            opacity: 1;
+        }
+    }
+}

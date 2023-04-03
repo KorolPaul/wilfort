@@ -1,0 +1,52 @@
+.button-wrapper {
+    @include button;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+
+    &:hover,
+    &:active {
+        opacity: 1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: $color;
+        z-index: -1;
+        transition: .3s ease-out transform;
+    }
+    &:hover::before,
+    &:active::before {
+        transform: scale(.97, .87);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border: 1px solid $color;
+        transition: .3s ease-out transform;
+    }
+    &:hover::after {
+        transform: scale(1.03, 1.13);
+    }
+    &:active::after {
+        transform: scale(.97, .87);
+    }
+
+    button, 
+    input {
+        background-color: transparent;
+        border: none;
+
+        &:hover,
+        &:active {
+            opacity: 1;
+        }
+    }
+}

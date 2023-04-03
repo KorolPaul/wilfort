@@ -1,6 +1,5 @@
 .header {
     @include layout;
-    position: fixed;
     left: 0;
     right: 0;
     top: 0;
@@ -8,10 +7,10 @@
     
     &_holder {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         min-height: 79px;
-        padding-top: 26px;
+        padding-top: 36px;
         gap: 40px;
     }
     &_menu-wrapper {
@@ -20,6 +19,7 @@
         align-items: center;
         position: relative;
         min-height: 24px;
-        top: -24px;
+        top: -8px;
+        padding-right: 175px;
     }
 }

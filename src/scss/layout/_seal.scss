@@ -1,3 +1,5 @@
 .seal {
-    @include appearance(.2s);
+    &.js-animation {
+        @include appearance(.2s);
+    }
 }

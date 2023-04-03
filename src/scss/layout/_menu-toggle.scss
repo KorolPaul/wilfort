@@ -1,9 +1,9 @@
 .menu-toggle {
     @include button-reset;
-    position: absolute;
-    right: 0;
-    top: -3px;
-    width: 28px;
+    position: fixed;
+    right: 24px;
+    top: 52px;
+    width: 32px;
     height: 28px;
     z-index: 10;
     display: flex;
@@ -11,15 +11,25 @@
     flex-direction: column;
     justify-content: space-between;
     transition: .2s $easingSmooth opacity;
-    @include desktop {
-        opacity: 0;
-        pointer-events: none;
+    @include desktop-extra-large {
+        right: auto;
+        left: 50%;
+        margin-left: 905px;
     }
 
-    .menu-hidden & {
-        opacity: 1;
-        pointer-events: all;
+    &::before {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
     }
+
 
     &_line {
         width: 100%;

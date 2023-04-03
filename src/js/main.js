@@ -41,7 +41,7 @@ smallSlider.forEach(el => {
         prevButton: false,
         autoplayButton: false,
         autoplayButtonOutput: false,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 7000,
     });
 });
 
@@ -59,23 +59,6 @@ function closeAllOpened() {
     document.querySelectorAll('.js-form-popup').forEach(el => el.classList.remove('opened'));
     document.querySelectorAll('.filters_content').forEach(el => el.classList.remove('opened'));
 }
-
-/* hide menu on scroll */
-window.addEventListener('scroll', function(e) {
-    if (window.pageYOffset > 200) {
-        document.body.classList.add('menu-hidden');
-        if (!document.body.classList.contains('menu-opened')) {
-            document.body.classList.add('menu-hidden-transition');
-        }
-    } else {
-        document.body.classList.remove('menu-opened');
-        document.body.classList.remove('menu-hidden');
-    }
-
-    setTimeout(() => {
-        document.body.classList.remove('menu-hidden-transition');
-    }, 500);
-})
 
 
 /* appaerance animation */
@@ -105,6 +88,26 @@ if (animatedElements.length) {
         observer.observe(el);
     })
 }
+
+const opacityElements = document.querySelectorAll('.js-opacity');
+opacityElements.forEach(el => {
+    const observerCallback = function (e) {
+        console.log(e[0].boundingClientRect.y);
+
+        const { target, intersectionRatio } = e[0];
+        if (e[0].boundingClientRect.y > 200) {
+            const opacity = intersectionRatio;
+            target.style.opacity = opacity > 0.85 ? 1 : opacity;
+        }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: thresholdSteps,
+        //root: document.body
+    });
+    observer.observe(el);
+});
 
 /* form */
 const feedbackAPiUrl = 'https://api.herowarsportal.com/api/feedback';

@@ -12,16 +12,16 @@
     <meta name="HandheldFriendly" content="true">
 </head>
 <body>
-    <span class="logo">
-        <img src="src/img/logo.png" alt="">
-    </span>
     <header class="header">
         <div class="header_holder">
+            <span class="logo">
+                <img src="src/img/logo.png" alt="">
+            </span>
             <div class="header_menu-wrapper">
                 <nav class="menu">
                     <a href="#about" class="menu_link">ABOUT US</a>
                     <a href="#activities" class="menu_link">ACTIVITIES</a>
-                    <a href="#lifestyle" class="menu_link">LIFESTTYLE</a>
+                    <a href="#lifestyle" class="menu_link">LIFESTYLE</a>
                     <a href="#contact" class="menu_link">CONTACT US</a>
                 </nav>
                 <button class="menu-toggle">
@@ -29,6 +29,12 @@
                     <div class="menu-toggle_line"></div>
                     <div class="menu-toggle_line"></div>
                 </button>
+                <nav class="menu menu__dropdown">
+                    <a href="#about" class="menu_link">ABOUT US</a>
+                    <a href="#activities" class="menu_link">ACTIVITIES</a>
+                    <a href="#lifestyle" class="menu_link">LIFESTYLE</a>
+                    <a href="#contact" class="menu_link">CONTACT US</a>
+                </nav>
             </div>
         </div>
     </header>
@@ -71,9 +77,9 @@
 
         <section class="section">
             <div class="section_holder">
-                <h2 class="section_title js-animation">ABOUT WILFORT AERO</h2>
+                <h2 class="section_title animated">ABOUT WILFORT AERO</h2>
                 <a name="about"></a>
-                <div class="about js-animation">
+                <div class="about">
                     <p class="about_text">We provide our clients and partners with the most comprehensive private aviation market intelligence advice, customized to meet their needs. What really makes the difference is the pride we take in building long-term relationships and supporting our clients with an uncompromising commitment to aviation.</p>
                     <img src="src/img/seal.png" alt="" class="seal">
                 </div>
@@ -82,9 +88,6 @@
 
         
         <section class="section section__dark">
-            <div class="section_image-wrapper  js-animation">
-                <img src="src/img/plane-1.jpg" alt="" class="section_image">
-            </div>
             <div class="section_holder">
                 <div class="advantage">
                     <p class="advantage_title">Wilfort Aero (part of the Wilfort Group) combines expertise in all segments of the business aviation industry to deliver a turnkey solution</p>
@@ -92,6 +95,7 @@
                 </div>
             </div>
         </section>
+        <img src="src/img/plane-1.jpg" alt="" class="section_image js-opacity">
 
         <section class="section">
             <div class="section_holder">
@@ -111,9 +115,6 @@
         </section>
 
         <section class="section section__dark">
-            <div class="section_image-wrapper js-animation">
-                <img src="src/img/plane-2.jpg" alt="" class="section_image">
-            </div>
             <div class="section_holder">
                 <div class="advantage">
                     <p class="advantage_title">Your trusted partner in private aviation</p>
@@ -121,6 +122,7 @@
                 </div>
             </div>
         </section>
+        <img src="src/img/plane-2.jpg" alt="" class="section_image js-opacity">
 
         <section class="section section__big-top-indent">
             <div class="section_holder">
@@ -207,8 +209,9 @@
                         <textarea placeholder="Your message" id="message" required></textarea>
                     </div>
                     <div class="form_row">
-
-                        <input type="submit" value="Submit">
+                        <div class="button-wrapper">
+                            <input type="submit" value="Submit">
+                        </div>
                     </div>
                 </div>
             </div>

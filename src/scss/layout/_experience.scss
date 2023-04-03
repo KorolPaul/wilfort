@@ -17,14 +17,9 @@
         @include tablet {
             position: absolute;
             left: 0;
-            top: 3vw;
-            font-size: 65px;
-            max-width: 450px;
-        }
-        @include desktop-large {
+            top: 8vw;
             font-size: 80px;
-            max-width: 500px;
-            top: 2vw;
+            max-width: 600px;
         }
 
         .animated & {
@@ -41,7 +36,7 @@
         transition: .5s $easing transform .3s,
                 .3s $easing opacity;
         @include tablet {
-            width: 70%;
+            width: 75%;
         }
 
         .animated & {
@@ -65,6 +60,7 @@
         @include tablet {
             left: -20px;
             top: 30%;
+            left: -24px;
         }
 
         .animated & {

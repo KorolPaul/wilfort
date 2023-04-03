@@ -18,7 +18,7 @@
     @media all and (min-width: 1360px) { @content; }
 }
 @mixin desktop-extra-large() {
-    @media all and (min-width: 1600px) { @content; }
+    @media all and (min-width: 1900px) { @content; }
 }
 @mixin media($resolution) {
     @media all and (min-width: $resolution) { @content; }

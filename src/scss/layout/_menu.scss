@@ -22,18 +22,9 @@
         position: static;
         padding: 0;
         background-color: transparent;
-        gap: 50px;
+        gap: 150px;
         height: 100%;
         align-items: center;
-    }
-    @include desktop-large {
-        gap: 100px;
-    }
-    
-    .menu-hidden-transition & {
-        @include desktop {
-            display: none;
-        }
     }
 
     .menu-opened & {
@@ -41,23 +32,21 @@
         pointer-events: all;
     }
 
-    .menu-hidden & {
-        @include desktop {
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            right: -16px;
-            top: -16px;
-            padding: 56px 16px 16px 16px;
-            background-color: $bg_color;
-            flex-direction: column;
-            gap: 16px;
-            height: auto;
-            align-items: flex-end;
-        }
+    &__dropdown {
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        right: 10px;
+        top: 36px;
+        padding: 56px 16px 16px 16px;
+        background-color: $bg_color;
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+        align-items: flex-end;
     }
 
-    .menu-hidden.menu-opened & {
+    .menu-opened &__dropdown {
         opacity: 1;
         pointer-events: all;
     }
@@ -70,18 +59,12 @@
         line-height: 1;
         white-space: nowrap;
         letter-spacing: .5px;
-        @include tablet {
-            font-size: 16px;
-        }
-        @include desktop-large {
-            font-size: 22px;
-        }
 
         &:hover {
             text-decoration: underline;
         }
 
-        .menu-hidden & {
+        .menu__dropdown & {
             font-size: 20px;
         }
     }

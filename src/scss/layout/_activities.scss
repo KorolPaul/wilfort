@@ -9,9 +9,6 @@
     @include tablet {
         width: 70%;
         margin-bottom: 110px;
-        font-size: 48px;
-    }
-    @include desktop-large {
         font-size: 58px;
     }
 
