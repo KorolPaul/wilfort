@@ -38,12 +38,17 @@
         position: fixed;
         right: 10px;
         top: 36px;
-        padding: 56px 16px 16px 16px;
+        padding: 72px 16px 16px 16px;
         background-color: $bg_color;
         flex-direction: column;
-        gap: 16px;
+        gap: 24px;
         height: auto;
         align-items: flex-end;
+        @include desktop-extra-large {
+            right: auto;
+            left: 50%;
+            margin-left: 790px;
+        }
     }
 
     .menu-opened &__dropdown {
@@ -58,7 +63,7 @@
         font-weight: 700;
         line-height: 1;
         white-space: nowrap;
-        letter-spacing: .5px;
+        letter-spacing: 1.2px;
 
         &:hover {
             text-decoration: underline;

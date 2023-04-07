@@ -3,6 +3,9 @@
     display: flex;
     justify-content: flex-end;
     text-align: left;
+    @include tablet {
+        margin-top: 36px;
+    }
 
     &_title {
         font-size: 40px;
@@ -19,7 +22,7 @@
             font-size: 80px;
             max-width: 500px;
             left: 0;
-            top: 3vw;
+            top: 5vw;
             bottom: auto;
             min-width: 0;
             transform: none;
