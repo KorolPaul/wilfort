@@ -19,13 +19,17 @@
         min-width: 50%;
         transition: .5s $easing opacity .2s;
         @include tablet {
-            font-size: 80px;
-            max-width: 500px;
+            font-size: 60px;
+            max-width: 400px;
             left: 0;
             top: 5vw;
             bottom: auto;
             min-width: 0;
             transform: none;
+        }
+        @include desktop {
+            font-size: 80px;
+            max-width: 500px;
         }
 
 

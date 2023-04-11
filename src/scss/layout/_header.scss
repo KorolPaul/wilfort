@@ -21,5 +21,11 @@
         min-height: 24px;
         top: -8px;
         padding-right: 175px;
+        @include tablet {
+            padding-right: 105px;
+        }
+        @include desktop-large {
+            padding-right: 175px;
+        }
     }
 }

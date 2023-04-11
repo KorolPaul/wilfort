@@ -7,8 +7,12 @@
     max-width: 1400px;
     margin: 0 auto 80px;
     @include tablet {
-        width: 70%;
+        width: 85%;
         margin-bottom: 110px;
+        font-size: 38px;
+    }
+    @include desktop {
+        width: 70%;
         font-size: 58px;
     }
 

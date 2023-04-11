@@ -2,6 +2,12 @@
     position: relative;
     text-align: right;
     padding-top: 80px;
+    @include tablet {
+        padding-top: 0;
+    }
+    @include desktop {
+        padding-top: 80px;
+    }
 
     &_title {
         margin: 0;
@@ -17,9 +23,14 @@
         @include tablet {
             position: absolute;
             left: 0;
-            top: 8vw;
+            top: 9vw;
+            font-size: 60px;
+            max-width: 500px;
+        }
+        @include desktop {
             font-size: 80px;
             max-width: 600px;
+            top: 8vw;
         }
 
         .animated & {
@@ -59,8 +70,11 @@
                     .5s $easing opacity;
         @include tablet {
             left: -20px;
-            top: 30%;
+            top: 20%;
             left: -24px;
+        }
+        @include desktop {
+
         }
 
         .animated & {

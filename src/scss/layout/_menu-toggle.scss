@@ -11,10 +11,10 @@
     flex-direction: column;
     justify-content: space-between;
     transition: .2s $easingSmooth opacity;
-    @include desktop-extra-large {
+    @include media(1540px) {
         right: auto;
         left: 50%;
-        margin-left: 905px;
+        margin-left: 720px;
     }
 
     &::before {
