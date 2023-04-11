@@ -1,5 +1,5 @@
 .advantage {
-    font-size: 32px;
+    font-size: 26px;
     max-width: 1520px;
     margin: auto;
     @include tablet {
@@ -7,12 +7,12 @@
         font-size: 48px;
     }
     @include desktop {
-        font-size: 58px;
+        font-size: 46px;
     }
 
     &_title {
         // @include appearance;
-        font: 24px $font-family__heading;
+        font: 19px $font-family__heading;
         margin-bottom: 40px;
         @include tablet {
             font-size: 28px;

@@ -136,7 +136,7 @@
     bottom: 8px;
     display: flex;
     justify-content: flex-end;
-    gap: 24px;
+    gap: 19px;
     margin: 0 0 40px;
     z-index: 2;
 
@@ -176,16 +176,16 @@
 
     .small-slider-wrapper & button[data-controls="prev"] {
         display: block;
-        left: 32px;
+        left: 26px;
         top: 50%;
         width: 13px;
-        height: 24px;
+        height: 19px;
     }
     .small-slider-wrapper & button[data-controls="next"] {
-        right: 32px;
+        right: 26px;
         top: 50%;
         width: 13px;
-        height: 24px;
+        height: 19px;
     }
 }
 

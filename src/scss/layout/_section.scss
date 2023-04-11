@@ -1,25 +1,25 @@
 .section {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
     @include tablet {
-        margin-bottom: 110px;
+        margin-bottom: 88px;
     }
 
     &__big-top-indent {
-        padding-top: 80px;
+        padding-top: 64px;
         @include tablet {
-            padding-top: 140px;
+            padding-top: 112px;
         }
     }
 
     &__dark {
         background-color: $color;
         color: $bg_color;
-        padding: 110px 0;
+        padding: 88px 0;
         transform: translateZ(0);
         @include tablet {
-            padding-top: 140px;
-            padding-bottom: 140px;
+            padding-top: 112px;
+            padding-bottom: 112px;
         }
     }
 
@@ -55,9 +55,9 @@
         width: 100%;
         z-index: 2;
         transition: .2s $easingSmooth all;
-        margin-top: -60px;
+        margin-top: -48px;
         @include tablet {
-            margin-top: -110px;
+            margin-top: -88px;
         }
 
         // margin-top: -60px;

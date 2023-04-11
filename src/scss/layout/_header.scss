@@ -11,21 +11,21 @@
         align-items: center;
         min-height: 79px;
         padding-top: 36px;
-        gap: 40px;
+        gap: 34px;
     }
     &_menu-wrapper {
         display: flex;
         gap: 150px;
         align-items: center;
         position: relative;
-        min-height: 24px;
+        min-height: 19px;
         top: -8px;
-        padding-right: 175px;
+        padding-right: 140px;
         @include tablet {
             padding-right: 105px;
         }
         @include desktop-large {
-            padding-right: 175px;
+            padding-right: 140px;
         }
     }
 }

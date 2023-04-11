@@ -11,16 +11,16 @@ input[type="tel"] {
     border-bottom: 1px solid $cGray;
     border-radius: 0;
     box-sizing: border-box;
-    font: 24px $font-family__heading;
-    height: 68px;
-    line-height: 58px;
-    padding: 0 22px;
+    font: 19px $font-family__heading;
+    height: 54px;
+    line-height: 46px;
+    padding: 0 18px;
     text-align: center;
     width: 100%;
     transition: .2s ease-in border-color,
                 .2s ease-in color;
     @include tablet {
-        font-size: 32px;
+        font-size: 21px;
     }
 
     &:focus {

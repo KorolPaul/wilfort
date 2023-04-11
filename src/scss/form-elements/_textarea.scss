@@ -6,17 +6,17 @@ textarea {
     border-bottom: 1px solid $cGray;
     border-radius: 0;
     box-sizing: border-box;
-    font: 24px $font-family__heading;
-    height: 68px;
-    line-height: 58px;
-    padding: 0 22px;
+    font: 19px $font-family__heading;
+    height: 54px;
+    line-height: 46px;
+    padding: 0 18px;
     text-align: center;
     resize: none;
     height: 150px;
     margin: 0;
     width: 100%;
     @include tablet {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     &:focus,

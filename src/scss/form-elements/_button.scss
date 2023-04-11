@@ -12,15 +12,15 @@
     white-space: nowrap;
     letter-spacing: 0.05em;
     text-align: center;
-    font-size: 24px;
-    line-height: 52px;
+    font-size: 19px;
+    line-height: 42px;
     font-family: $font-family__heading;
     min-width: 250px;
     width: 100%;
     transition: .2s $easing opacity;
     @include tablet {
         width: auto;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     &:hover {

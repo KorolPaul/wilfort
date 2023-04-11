@@ -3,19 +3,19 @@
     width: 80%;
     max-width: 780px;
     margin: auto;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     @include tablet {
-        font-size: 24px;
+        font-size: 19px;
     }
 
     &_text {
-        font-size: 24px;
+        font-size: 19px;
         @include tablet {
-            font-size: 28px;
+            font-size: 22px;
         }
         @include desktop {
-            font-size: 32px;
+            font-size: 26px;
         }
     }
 }

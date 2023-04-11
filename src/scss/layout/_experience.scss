@@ -1,17 +1,17 @@
 .experience {
     position: relative;
     text-align: right;
-    padding-top: 80px;
+    padding-top: 64px;
     @include tablet {
         padding-top: 0;
     }
     @include desktop {
-        padding-top: 80px;
+        padding-top: 64px;
     }
 
     &_title {
         margin: 0;
-        font: 400 40px $font-family;
+        font: 400 32px $font-family;
         text-transform: none;
         text-align: left;
         line-height: 1;
@@ -24,11 +24,11 @@
             position: absolute;
             left: 0;
             top: 9vw;
-            font-size: 60px;
+            font-size: 48px;
             max-width: 500px;
         }
         @include desktop {
-            font-size: 80px;
+            font-size: 64px;
             max-width: 600px;
             top: 8vw;
         }
@@ -69,9 +69,8 @@
         transition: 1.5s $easing transform .2s,
                     .5s $easing opacity;
         @include tablet {
-            left: -20px;
-            top: 20%;
-            left: -24px;
+            top: 35%;
+            left: -19px;
         }
         @include desktop {
 

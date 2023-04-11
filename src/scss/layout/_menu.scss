@@ -7,12 +7,12 @@
     opacity: 0;
     pointer-events: none;
     position: absolute;
-    right: -16px;
-    top: -16px;
-    padding: 56px 16px 16px 16px;
+    right: -13px;
+    top: -13px;
+    padding: 56px 13px 13px 13px;
     background-color: $bg_color;
     flex-direction: column;
-    gap: 16px;
+    gap: 13px;
     transition: .2s $easingSmooth opacity;
     @include desktop {
         flex-direction: row;
@@ -26,7 +26,7 @@
         align-items: center;
     }
     @include desktop-large {
-        gap: 150px;
+        gap: 120px;
     }
 
     .menu-opened & {
@@ -40,10 +40,10 @@
         position: fixed;
         right: 10px;
         top: 36px;
-        padding: 72px 16px 16px 16px;
+        padding: 72px 13px 13px 13px;
         background-color: $bg_color;
         flex-direction: column;
-        gap: 24px;
+        gap: 19px;
         height: auto;
         align-items: flex-end;
         @include desktop-extra-large {
@@ -61,7 +61,7 @@
     &_link {
         color: $color;
         font-family: $font-family__heading;
-        font-size: 24px;
+        font-size: 19px;
         font-weight: 700;
         line-height: 1;
         white-space: nowrap;
@@ -70,7 +70,7 @@
             font-size: 20px;
         }
         @include desktop-large {
-            font-size: 24px;
+            font-size: 19px;
         }
 
         &:hover {

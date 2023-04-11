@@ -1,9 +1,9 @@
 %heading-1 {
     font-family: $font-family__heading;
-    font-size: 52px;
+    font-size: 42px;
     line-height: 64px;
     font-weight: 400;
-    margin: 0 0 24px;
+    margin: 0 0 19px;
     position: relative;
     filter: drop-shadow(0px 5px 0px #5A6C99)  drop-shadow(0px 5px 0px #5A6C99);
     @include desktop {
@@ -14,24 +14,24 @@
 }
 %heading-2 {
     font-family: $font-family__heading;
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 700;
-    margin: 130px 0 20px;
+    margin: 104px 0 16px;
     letter-spacing: 1.2px;
     text-transform: uppercase;
 }
 %heading-3 {
     font-family: $font-family;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.2;
     font-weight: 400;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin-top: 48px;
+    margin-bottom: 24px;
     @include tablet {
         font-size: 48px;
     }
     @include desktop-extra-large {
-        font-size: 58px;
+        font-size: 46px;
     }
 }
 %heading-4 {
@@ -45,11 +45,11 @@
 }
 %heading-5 {
     font-family: $font-family__heading;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.2;
     font-weight: 400;
     @include desktop {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
