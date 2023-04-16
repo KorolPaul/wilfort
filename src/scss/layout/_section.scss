@@ -2,13 +2,13 @@
     position: relative;
     margin-bottom: 48px;
     @include tablet {
-        margin-bottom: 88px;
+        margin-bottom: 75px;
     }
 
     &__big-top-indent {
         padding-top: 64px;
         @include tablet {
-            padding-top: 112px;
+            padding-top: 95px;
         }
     }
 
@@ -18,8 +18,8 @@
         padding: 88px 0;
         transform: translateZ(0);
         @include tablet {
-            padding-top: 112px;
-            padding-bottom: 112px;
+            padding-top: 95px;
+            padding-bottom: 95px;
         }
     }
 

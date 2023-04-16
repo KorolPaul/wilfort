@@ -1,25 +1,25 @@
 .activities {
-    margin-bottom: 130px;
+    margin-bottom: 110px;
 }
 
 .activity {
     font-size: 19px;
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto 80px;
     @include tablet {
         width: 85%;
         margin-bottom: 110px;
-        font-size: 38px;
+        font-size: 32px;
     }
     @include desktop {
         width: 70%;
-        font-size: 46px;
+        font-size: 40px;
     }
 
     &_title {
         font-style: italic;
         text-decoration: underline;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
     }
     &_text {
     }
@@ -38,14 +38,14 @@
         }
     }
     &_image + h3 {
-        margin-top: 34px;
+        margin-top: 30px;
     }
     &_disclaimer {
         font: 14px $font-family__heading;
         max-width: 900px;
         margin: 40px auto 0;
         @include tablet {
-            font-size: 22px;
+            font-size: 18px;
         }
     }
 }

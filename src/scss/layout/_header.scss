@@ -9,9 +9,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 79px;
-        padding-top: 36px;
-        gap: 34px;
+        min-height: 72px;
+        padding-top: 32px;
+        gap: 30px;
     }
     &_menu-wrapper {
         display: flex;
@@ -23,9 +23,11 @@
         padding-right: 140px;
         @include tablet {
             padding-right: 105px;
+            gap:100px;
+            top: 0;
         }
         @include desktop-large {
-            padding-right: 140px;
+            padding-right: 120px;
         }
     }
 }

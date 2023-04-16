@@ -4,10 +4,7 @@
     margin: auto;
     @include tablet {
         width: 80%;
-        font-size: 48px;
-    }
-    @include desktop {
-        font-size: 46px;
+        font-size: 40px;
     }
 
     &_title {
@@ -15,7 +12,7 @@
         font: 19px $font-family__heading;
         margin-bottom: 40px;
         @include tablet {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
     &_text {

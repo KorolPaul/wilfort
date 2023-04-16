@@ -7,16 +7,16 @@ textarea {
     border-radius: 0;
     box-sizing: border-box;
     font: 19px $font-family__heading;
-    height: 54px;
+    height: 46px;
     line-height: 46px;
     padding: 0 18px;
     text-align: center;
     resize: none;
-    height: 150px;
+    height: 100px;
     margin: 0;
     width: 100%;
     @include tablet {
-        font-size: 26px;
+        font-size: 18px;
     }
 
     &:focus,

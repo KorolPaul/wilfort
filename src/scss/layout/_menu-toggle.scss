@@ -2,7 +2,7 @@
     @include button-reset;
     position: fixed;
     right: 24px;
-    top: 52px;
+    top: 54px;
     width: 32px;
     height: 28px;
     z-index: 10;
@@ -11,10 +11,10 @@
     flex-direction: column;
     justify-content: space-between;
     transition: .2s $easingSmooth opacity;
-    @include media(1540px) {
+    @include media(1240px) {
         right: auto;
         left: 50%;
-        margin-left: 720px;
+        margin-left: 568px;
     }
 
     &::before {

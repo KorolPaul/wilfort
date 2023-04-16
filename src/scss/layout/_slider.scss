@@ -28,7 +28,7 @@
             transform: none;
         }
         @include desktop {
-            font-size: 64px;
+            font-size: 54px;
             max-width: 500px;
         }
 
@@ -69,7 +69,7 @@
         transition: 1.5s $easing transform .2s,
                     .5s $easing opacity;
         @include tablet {
-            bottom: -130px;
+            bottom: -110px;
             left: 105px;
             top: auto;
         }

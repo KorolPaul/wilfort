@@ -12,7 +12,7 @@ input[type="tel"] {
     border-radius: 0;
     box-sizing: border-box;
     font: 19px $font-family__heading;
-    height: 54px;
+    height: 46px;
     line-height: 46px;
     padding: 0 18px;
     text-align: center;
@@ -20,7 +20,7 @@ input[type="tel"] {
     transition: .2s ease-in border-color,
                 .2s ease-in color;
     @include tablet {
-        font-size: 21px;
+        font-size: 18px;
     }
 
     &:focus {

@@ -3,7 +3,7 @@
     width: 144px;
     @include tablet {
         flex-shrink: 0;
-        width: auto;
+        width: 210px;
     }
 
     &_image {

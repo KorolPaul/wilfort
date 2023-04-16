@@ -26,7 +26,7 @@
         align-items: center;
     }
     @include desktop-large {
-        gap: 120px;
+        gap: 100px;
     }
 
     .menu-opened & {
@@ -46,10 +46,10 @@
         gap: 19px;
         height: auto;
         align-items: flex-end;
-        @include desktop-extra-large {
+        @include media(1240px) {
             right: auto;
             left: 50%;
-            margin-left: 790px;
+            margin-left: 458px;
         }
     }
 
@@ -67,10 +67,7 @@
         white-space: nowrap;
         letter-spacing: 1.2px;
         @include desktop {
-            font-size: 20px;
-        }
-        @include desktop-large {
-            font-size: 19px;
+            font-size: 17px;
         }
 
         &:hover {
