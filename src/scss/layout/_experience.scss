@@ -70,7 +70,8 @@
                     .5s $easing opacity;
         @include tablet {
             top: 35%;
-            left: -19px;
+            left: -50px;
+            width: 20%;
         }
         @include desktop {
 

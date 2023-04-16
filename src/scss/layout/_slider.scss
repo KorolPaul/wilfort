@@ -12,7 +12,7 @@
         line-height: 1;
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 5px;
         z-index: 3;
         transform: translate(-50%, 0);
         opacity: 0;
@@ -42,7 +42,7 @@
         z-index: 1;
         width: 90%;
         opacity: 0;
-        margin-bottom: 50vw;
+        margin-bottom: 160px;
         transition: .5s $easing transform .3s,
                     .3s $easing opacity;
         transform: translate(100%);
@@ -70,8 +70,9 @@
                     .5s $easing opacity;
         @include tablet {
             bottom: -110px;
-            left: 105px;
+            left: 75px;
             top: auto;
+            width: 18%;
         }
 
         .tns-slide-active & {

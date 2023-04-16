@@ -80,3 +80,14 @@ a[name] {
 .bright {
     color: $cOrange;
 }
+
+article {
+    @include layout;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    @include tablet {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        max-width: 1000px;
+    }
+}

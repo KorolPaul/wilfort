@@ -6,8 +6,8 @@
     font-size: 19px;
     max-width: 1000px;
     margin: 0 auto 80px;
+    width: 85%;
     @include tablet {
-        width: 85%;
         margin-bottom: 110px;
         font-size: 32px;
     }
@@ -24,6 +24,7 @@
     &_text {
     }
     &_image {
+        width: 145px;
         display: block;
         border-radius: 50%;
         margin: 0 auto 0px;
@@ -31,6 +32,9 @@
         opacity: 0;
         transition: .3s $easingSmooth opacity,
                     .6s $easingSmooth transform;
+        @include tablet {
+            width: auto;
+        }
 
         &.animated {
             opacity: 1;

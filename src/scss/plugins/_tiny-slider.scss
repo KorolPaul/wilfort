@@ -137,8 +137,10 @@
     display: flex;
     justify-content: flex-end;
     gap: 19px;
-    margin: 0 0 40px;
     z-index: 2;
+    @include tablet {
+        margin: 0 0 40px;
+    }
 
     .small-slider-wrapper & {
         position: static;
@@ -172,6 +174,7 @@
     }
     button[data-controls="next"]{
         background: url(#{$img}/next.png) no-repeat center / 100%;
+        height: 35px;
     }
 
     .small-slider-wrapper & button[data-controls="prev"] {
@@ -193,14 +196,10 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin: 45px 0 0;
     border: none;
     position: absolute;
     right: 0;
-    top: 43%;
-    @include media(420px) {
-        top:50%;
-    }
+    bottom: 115px;
     @include tablet {
         margin-top: 55px;
         position: static;
@@ -216,11 +215,15 @@
 
     button {
         @include button-reset;
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
         border-radius: 50%;
         background-color: #d1d1cf;
         transition: .2s $easing background;
+        @include tablet {
+            height: 15px;
+            width: 15px;
+        }
 
         &.tns-nav-active,
         &:hover {

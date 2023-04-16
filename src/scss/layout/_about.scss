@@ -7,6 +7,7 @@
     text-align: center;
     @include tablet {
         font-size: 17px;
+        width: 60%;
     }
 
     &_text {

@@ -22,12 +22,9 @@
         top: -8px;
         padding-right: 140px;
         @include tablet {
-            padding-right: 105px;
+            padding-right: 145px;
             gap:100px;
             top: 0;
-        }
-        @include desktop-large {
-            padding-right: 120px;
         }
     }
 }
